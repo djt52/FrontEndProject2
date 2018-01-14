@@ -1,0 +1,36 @@
+﻿.SelectQuiz{
+	float: left;
+	border: 3px solid green;
+	width: 80%;
+	display:block;
+}
+.SelectQuiz h1{
+	text-align: center;
+}
+.container{
+	width: 100%;
+	text-align:center;
+	border: 3px solid green;
+	display: block;
+}
+.MultipleChoiceWrapper{
+	display:inline-block;
+	
+	width: 100%;
+}
+.col-lg-6:hover{background-color:orange}
+.Question{
+	display:block;
+	width: 70%;
+	float: left;
+}
+.Account{
+	display:block;
+	width: 30%;
+	float: right;
+}
+.Leaderboard{
+	width: 20%;
+	display:block;
+	float:right;
+}
