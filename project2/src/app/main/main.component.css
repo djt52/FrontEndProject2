@@ -13,24 +13,4 @@
 	border: 3px solid green;
 	display: block;
 }
-.MultipleChoiceWrapper{
-	display:inline-block;
-	
-	width: 100%;
-}
-.col-lg-6:hover{background-color:orange}
-.Question{
-	display:block;
-	width: 70%;
-	float: left;
-}
-.Account{
-	display:block;
-	width: 30%;
-	float: right;
-}
-.Leaderboard{
-	width: 20%;
-	display:block;
-	float:right;
-}
+

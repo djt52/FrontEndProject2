@@ -11,6 +11,8 @@ import { MainComponent } from './main/main.component';
 import { AccountComponent } from './account/account.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { LoginComponent } from './login/login.component';
+import { QuestionsService } from './questions.service'
+import { LeaderService } from './leader.service'
 
 
 @NgModule({
@@ -29,9 +31,10 @@ import { LoginComponent } from './login/login.component';
     RouterModule.forRoot([
       {path: '', component: MainComponent},
       {path: 'login', component: LoginComponent}
+      {path: 'quiz', component: QuizComponent}
     ])
   ],
-  providers: [],
+  providers: [QuestionsService, LeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

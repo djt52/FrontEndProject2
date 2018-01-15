@@ -1,9 +1,8 @@
-﻿<h4>Leaderboard</h4>
-  <div>
-      <ol>
-        <li *ngFor="let l of leader">
-            {{l.name}} {{l.score}}
-        </li>
-      </ol>
-    </div>
-  
+﻿  <div style="border: 3px solid orange" class="Leaderboard">
+  <h1>Leaderboard</h1>
+	<ol>
+      <li *ngFor="let l of leader">
+       {{l.name}} {{l.score}}
+      </li>
+    </ol>
+  </div>
