@@ -9,10 +9,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { MainComponent } from './main/main.component';
 import { AccountComponent } from './account/account.component';
-import { QuizComponent } from './quiz/quiz.component';
 import { LoginComponent } from './login/login.component';
-import { QuestionsService } from './questions.service'
-import { LeaderService } from './leader.service'
+import { SelectQuizComponent } from './select-quiz/select-quiz.component';
+import { QuestionComponent } from './question/question.component';
 
 
 @NgModule({
@@ -23,18 +22,21 @@ import { LeaderService } from './leader.service'
     LeaderboardComponent,
     MainComponent,
     AccountComponent,
-    QuizComponent,
-    LoginComponent
+    LoginComponent,
+    SelectQuizComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: '', component: MainComponent},
       {path: 'login', component: LoginComponent}
-      {path: 'quiz', component: QuizComponent}
     ])
   ],
-  providers: [QuestionsService, LeaderService],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+
+}

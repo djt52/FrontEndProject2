@@ -1,0 +1,21 @@
+.Account{
+	background: white;
+	display:block;
+	width: 25%;
+	float: right;
+	height: 100%;
+	padding-top: 2.5%;
+	
+	
+}
+h1:after{
+	content: "";
+	background: #111b24;
+	height: 3px;
+	display:block;
+	width: 100px;
+	border-radius: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+}

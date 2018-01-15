@@ -1,5 +1,24 @@
-﻿.Leaderboard{
-	width: 20%;
+.Leaderboard{
+	width: 25%;
 	display:block;
 	float:right;
+	text-align: center;
+	background: white;
+	height: 50%;
+	font-family:"Enriqueta", serif;
+}
+h1:after{
+	content: "";
+	background: #111b24;
+	height: 3px;
+	display:block;
+	width: 100px;
+	border-radius: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+}
+#Leaderboard{
+	color: #bf9b30;
+	text-shadow: 1.3px 1.3px #998100;
 }

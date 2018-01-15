@@ -1,0 +1,45 @@
+.MultipleChoiceWrapper{
+	display:inline-block;
+	background: #5c7685;
+	height: 100%;
+	width: 100%;
+
+}
+.questionlabel:hover{
+	background-color: #bf9b30;
+	cursor: pointer;
+	padding-right: 10%;
+	padding-left: 10%;
+	transform: 	scale(1.2);
+	box-shadow: 7px 10px 0px rgba(0, 0, 0, 0.1);
+	
+}
+
+.Question{
+	background: #c8c2ae;
+	display:block;
+	width: 50%;
+	height: 100%;
+	float: left;
+	font-size: 2em;
+	font-family:"Enriqueta", "serif";
+	padding-bottom: 2%;
+	box-shadow: 3px 55px 0px rgba(0, 0, 0, 0.1);
+	border-top: 10px solid white;
+}
+
+h1:after{
+	content: "";
+	background: #111b24;
+	height: 3px;
+	display:block;
+	width: 100px;
+	border-radius: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+}
+
+.awd{
+	height: 100%;
+}

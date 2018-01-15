@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  ngOnInit(){
+    let docWidth = document.documentElement.offsetWidth;
+    
+    [].forEach.call(
+      document.querySelectorAll('*'),
+      function(el) {
+        if (el.offsetWidth > docWidth) {
+          console.log(el);
+        }
+      }
+    );
+  }
 }
+
+

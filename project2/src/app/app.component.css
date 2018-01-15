@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+  }
+
+body {
+    padding:0;
+    margin:0;
+    background:white;
+    display: table;
+    
+}
+router-outlet{
+    height: 100%;
+}
