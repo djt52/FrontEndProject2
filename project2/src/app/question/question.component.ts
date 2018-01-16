@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-question',
@@ -12,8 +12,8 @@ export class QuestionComponent implements OnInit {
   ngOnInit() {
     let jsondata = `[{"question":"Arasilly is stupid.Loream Ipsum Fataneums. AWDADWADADAWDAWDWDAWD", "option1":1,"option2":2,"option3":3,"option4":4,"answer":4},{"question":"3+2", "option1":1,"option2":2,"option3":5,"option4":4,"answer":3}]`;
     this.questions = JSON.parse(jsondata);
+    this.index = 0;
     this.questionAnswered(0);
-    this.index=0;
   }
   public question: string;
   public option1: string;
@@ -22,13 +22,12 @@ export class QuestionComponent implements OnInit {
   public option4: string;
 
   public questions;
-  public index = 0;
+  public index;
 
   //NgStyle 
   questionAnswered(answer: number) {
       //if(this.index == 0) {
-     
-      console.log(this.questions)
+      console.log(this.index)
       this.question = this.questions[this.index].question;
       this.option1 = this.questions[this.index].option1;
       this.option2 = this.questions[this.index].option2;

@@ -18,3 +18,4 @@ export class Leaders {
       this.name=s;
       this.score=n;
   }
+  }

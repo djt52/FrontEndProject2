@@ -40,9 +40,9 @@ export class QuizComponent implements OnInit {
 
   //NgStyle
   questionAnswered(answer: number) {
-        this.index++;
+      this.index++;
+      //console.log(this.index);
       //if(this.index == 0) {
-      console.log(this.questions)
       this.question = this.questions[this.index].question;
       this.option1 = this.questions[this.index].option1;
       this.option2 = this.questions[this.index].option2;
