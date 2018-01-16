@@ -7,6 +7,7 @@ export class LeaderService {
 
   getLeaders() {
       return [new Leaders('John',1000), new Leaders('Jim',900)];
+      // return this.http.get<Leaders[]>(/*url*/);
   }
 }
 export class Leaders {

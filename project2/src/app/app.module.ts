@@ -12,6 +12,9 @@ import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './login/login.component';
 import { SelectQuizComponent } from './select-quiz/select-quiz.component';
 import { QuestionComponent } from './question/question.component';
+import {QuestionsService } from './questions.service';
+import {LeaderService } from './leader.service';
+import {UserService} from './user.service';
 
 
 @NgModule({
@@ -33,7 +36,7 @@ import { QuestionComponent } from './question/question.component';
       {path: 'login', component: LoginComponent}
     ])
   ],
-  providers: [],
+  providers: [QuestionsService, LeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

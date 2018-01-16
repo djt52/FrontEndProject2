@@ -10,6 +10,7 @@ export class QuestionsService {
   getQuestions(): Observable<Question[]> {
       let jsondata = `[{"question":"2+2", "option1":1,"option2":2,"option3":3,"option4":4,"answer":4},{"question":"3+2", "option1":1,"option2":2,"option3":5,"option4":4,"answer":3}]`;
       return JSON.parse(jsondata);
+      //return this.http.get<Question[]>(/*url*/);
   }
 }
 
