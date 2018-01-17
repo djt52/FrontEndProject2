@@ -10,6 +10,16 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
+  PresentPage(obj){
+    console.log("Present Page is running");
+		var everyMenuBar = document.getElementsByClassName('presentState');
+		for(var i =0; i<everyMenuBar.length; i++){
+			everyMenuBar[i].className ="navMenu";
+		}
+		obj.className = "presentState";	
+		
+	}
 }

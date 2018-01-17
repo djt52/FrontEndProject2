@@ -51,14 +51,18 @@
 }
 .slideshow img{
 	overflow:hidden;
-	
+
 	width: 1600px;
-	
+
+}
+.slideimage{
+	position: absolute;
+	top:0;
 }
 .slide{
 	height: 330px;
 	width: 1600px;
-	
+	position:relative;
 	float:left;
 	overflow:hidden;
 }

@@ -31,3 +31,12 @@
 .navMenu:hover{
 	color: #3fbfad;
 }
+
+.presentState, .presentState:hover{
+	background: #3fbfad;
+	color:white ;
+
+}
+.presentState:hover{
+	color: white !important; 
+}
