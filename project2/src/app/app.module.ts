@@ -1,7 +1,7 @@
 ﻿import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,7 +14,7 @@ import { SelectQuizComponent } from './select-quiz/select-quiz.component';
 import { QuestionComponent } from './question/question.component';
 import {QuestionsService } from './questions.service';
 import {LeaderService } from './leader.service';
-import {UserService} from './user.service';
+import { UserService } from './user.service';
 import { RegisterComponent } from './register/register.component';
 
 
@@ -33,13 +33,14 @@ import { RegisterComponent } from './register/register.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: '', component: MainComponent},
       {path: 'login', component: LoginComponent},
       {path: 'register', component: RegisterComponent}
     ])
   ],
-  providers: [QuestionsService, LeaderService],
+  providers: [QuestionsService, LeaderService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
