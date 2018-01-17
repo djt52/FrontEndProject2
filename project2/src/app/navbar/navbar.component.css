@@ -3,16 +3,31 @@
 	margin-right:19%;
 	margin-left:19%;
 	
+	
 }
 .navMenu{
-	font-family: 'Enriqueta', serif;
-	font-size: 1.5em;
-	text-shadow: 1.5px 1.5px #111b24;
+	font-family: "Ubuntu","sans-serif";
+	font-size: 1.1em;
+	background-color: transparent;
+	color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .3s;
 	
 }
+
+.caret{
+	color: #3fbfad;
+	size: 2em;
+}
+
 .btn{
-	background: #081a32;
+	background-color: #070f12;
+	
+}
+.btn:hover{
+	color:#3fbfad;
 }
 .navMenu:hover{
-	
+	color: #3fbfad;
 }

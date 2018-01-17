@@ -9,7 +9,7 @@ body {
     margin:0;
     background:white;
     display: table;
-    
+    font-family:Ubuntu,sans-serif;
 }
 router-outlet{
     height: 100%;

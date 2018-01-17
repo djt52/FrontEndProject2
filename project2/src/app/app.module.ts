@@ -14,7 +14,7 @@ import { SelectQuizComponent } from './select-quiz/select-quiz.component';
 import { QuestionComponent } from './question/question.component';
 import {QuestionsService } from './questions.service';
 import {LeaderService } from './leader.service';
-import {UserService} from './user.service;
+import {UserService} from './user.service';
 import { RegisterComponent } from './register/register.component';
 
 
