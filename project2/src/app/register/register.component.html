@@ -1,0 +1,32 @@
+﻿<div class="login-box-wrapper"> 
+            <div class="reimbursement-box">
+                <div id="reimbursement-input">
+                    <h2 class="welcome"> Please fill out your presentation!</h2>
+
+                    <form id="ReimbursementForm" action="Proj1Controller" method="get">
+                        <div class="form-group">
+                              <label for="GradeType" class="text-uppercase">Type of Grade</label>
+                              <select style="display:block; width: 50%; margin-top: 2%; margin-bottom: 2%; margin-left: 25%; margin-right: 25%" name="GradeType">
+                                  <option value = "1">P/NP</option>
+                                  <option value = "2">Letter</option>
+                                  <option value = "3">Point-scale</option>
+                              </select>
+                           
+                       </div>
+                       <div class="form-group">
+                            <label for="Grade" class="text-uppercase">Grade</label>
+                            <input style="width: 100%;" type="text" class="form-control" placeholder="" name="Grade">
+                        </div>
+                        <div class="form-group">
+                            <label for="attached" class="text-uppercase">Attached Files/Images (Optional)</label>
+                            <input style="display:block; width: 50%; margin-top: 2%; margin-bottom: 2%; margin-left: 25%; margin-right: 25%" type="file" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-check">
+                            <button type="submit" class="sub">Submit</button>
+                            <input  type="reset" class="reset">
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>

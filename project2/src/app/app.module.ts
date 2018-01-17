@@ -14,7 +14,8 @@ import { SelectQuizComponent } from './select-quiz/select-quiz.component';
 import { QuestionComponent } from './question/question.component';
 import {QuestionsService } from './questions.service';
 import {LeaderService } from './leader.service';
-import {UserService} from './user.service';
+import {UserService} from './user.service;
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -27,13 +28,15 @@ import {UserService} from './user.service';
     AccountComponent,
     LoginComponent,
     SelectQuizComponent,
-    QuestionComponent
+    QuestionComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: '', component: MainComponent},
-      {path: 'login', component: LoginComponent}
+      {path: 'login', component: LoginComponent},
+      {path: 'register', component: RegisterComponent}
     ])
   ],
   providers: [QuestionsService, LeaderService],
