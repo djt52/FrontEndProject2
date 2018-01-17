@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   login() {
     let message = userService.login(email, password);
     if(message == "logged in") {
-    
+      this.router.navigate(['/register']);
     }
   }
   */
