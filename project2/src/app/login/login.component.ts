@@ -8,19 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  //public user: User
   constructor(private userService: UserService, private router: Router) { }
-
+  email = "";
+  password = "";
   ngOnInit() {
-   
+    
+   //console.log(this.userService.login());
   }
-  /*
+  
   login() {
-    let message = userService.login(email, password);
-    if(message == "logged in") {
-      this.router.navigate(['/register']);
+  this.userService.login(this.email,this.password)
+  /*
+    if(this.userService.login(this.email,this.password)) {
+      this.router.navigate(['/']);
     }
+    */
   }
-  */
+  
 
 }

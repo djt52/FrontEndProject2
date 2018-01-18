@@ -17,9 +17,11 @@ export class Leaders {
   //public showLeaders()
   public name: string;
   public score: number;
-  
+
+    
   constructor(s: string, n: number) {
       this.name=s;
       this.score=n;
   }
+  
   }

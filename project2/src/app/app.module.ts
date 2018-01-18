@@ -34,6 +34,7 @@ import { RegisterComponent } from './register/register.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: '', component: MainComponent},
       {path: 'login', component: LoginComponent},
