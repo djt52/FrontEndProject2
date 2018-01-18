@@ -27,12 +27,9 @@ export class UserService {
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-      /*
-          if(this.responseText == 'Incorrect Password' || this.responseText == 'Invalid Email') {
-            document.getElementById('message').innerHTML = this.responseText;
-            } else {
-          } */
+      
           if(this.responseText == `{"validuser":"true"}`) {
+              console.log("logged in")
               return 1;
           } else {
               return 0;
@@ -46,10 +43,16 @@ export class UserService {
   }
   
 
-  getUser(email: string): Observable<User> {
-    let url = "w";
-    return this.http.get<User>(url);
-    
+  register(email: string, password: string, first:string, last: string) {
+    let xml = new XMLHttpRequest();
+    xml.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+          
+       }
+    };
+      xml.open('GET',`http://54.198.14.22:8090/api/register?email=${email}&password=${password}&fname=${first}&lname=${last}`,true);
+      xml.send();
+
   }
 
 }

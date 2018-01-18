@@ -1,5 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
-
+import { UserService } from '../user.service'
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,7 +7,7 @@
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
   email = "";
   password = "";
   first = "";
@@ -16,4 +16,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+  register() {
+      this.userService.register(this.email,this.password,this.first,this.last);
+  }
 }
