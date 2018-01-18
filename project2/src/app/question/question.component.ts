@@ -2,6 +2,7 @@
 import { QuestionsService } from '../questions.service';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { UserService } from '../user.service'
 
 @Component({
   selector: 'app-question',
@@ -10,7 +11,7 @@ import { of } from 'rxjs/observable/of';
 })
 export class QuestionComponent implements OnInit {
 
-  constructor(private questionsService: QuestionsService) { }
+  constructor(private questionsService: QuestionsService,private userService: UserService) { }
 
   ngOnInit() {
   /*
@@ -23,12 +24,11 @@ export class QuestionComponent implements OnInit {
     this.questionsService.getQuestions().subscribe(
         res => {
           console.log(res);
-          this.questions = res[0];
+          this.questions = res;
           console.log(this.questions);   
           this.questionAnswered(0);
          }
     );
-    console.log(this.question);
   }
   /*
   questionGet(cfunction) {
@@ -64,16 +64,28 @@ export class QuestionComponent implements OnInit {
 
   //NgStyle 
   questionAnswered(answer: number) {
-      //if(this.index == 0) {
-      console.log(this.index);
-      console.log(this.questions)
-      this.question = this.questions.question;
-      this.option1 = this.questions.choice1;
-      this.option2 = this.questions.choice2;
-      this.option3 = this.questions.choice3;
-      this.option4 = this.questions.choice4;
-      this.index++;
-      
+      if(answer != 0) {
+        if(answer == this.questions[this.index].answer) {
+            this.userService.correct();
+            console.log("Correct")
+        } else {
+            this.userService.incorrect();
+            console.log("Incorrect")
+        }
+        this.index++;
+       }
+      //console.log(this.index);
+      if(this.index < this.questions.length) {
+        this.question = this.questions[this.index].question;
+        this.option1 = this.questions[this.index].choice1;
+        this.option2 = this.questions[this.index].choice2;
+        this.option3 = this.questions[this.index].choice3;
+        this.option4 = this.questions[this.index].choice4;
+      } else {
+          console.log(this.userService.getRight())
+          console.log(this.userService.getWrong())
+          console.log(this.userService.getTotal())
+      }
   }
 
 }

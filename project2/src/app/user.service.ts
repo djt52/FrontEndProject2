@@ -10,7 +10,9 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   loggedUser: User;
-  
+  public right = 0;
+  public total = 0;
+  public wrong = 0;
   login(email: string, password: string): number {
   /*
     let url = "http://54.198.14.22:8090/api/login?email=regop412@gmail.com&password=p4ssw0rd";
@@ -55,6 +57,25 @@ export class UserService {
 
   }
 
+  correct() {
+    this.right++;
+    this.total++;
+  }
+
+  incorrect() {
+    this.wrong++;
+    this.total++;
+  }
+
+  getRight(): number {
+    return this.right;
+  }
+  getWrong(): number {
+    return this.wrong;
+  }
+  getTotal(): number {
+    return this.total;
+  }
 }
 
 export class User {

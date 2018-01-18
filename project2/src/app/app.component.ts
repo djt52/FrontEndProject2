@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent {
       document.querySelectorAll('*'),
       function(el) {
         if (el.offsetWidth > docWidth) {
-          console.log(el);
+          //console.log(el);
         }
       }
     );

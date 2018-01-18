@@ -8,22 +8,13 @@ export class QuestionsService {
 
   constructor(private http: HttpClient) { }
   public questions
+  
   getQuestions(): Observable<any> {
-      //let jsondata = `[{"question":"2+2", "option1":1,"option2":2,"option3":3,"option4":4,"answer":4},{"question":"3+2", "option1":1,"option2":2,"option3":5,"option4":4,"answer":3}]`;
-      //return JSON.parse(jsondata);
-      //return this.http.get<Question[]>(/*url*/);
-     /*
-      let xml = new XMLHttpRequest();
-      xml.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-          console.log(this.responseText)
-       }
-    };
-      xml.open('GET',`http://54.198.14.22:8090/api/questionslist?quiz=1`,true);
-      xml.send();
-      */
+      
       return this.http.get(`http://54.198.14.22:8090/api/questionslist?quiz=1`);
   }
+
+  
 }
 
 export class Question {
