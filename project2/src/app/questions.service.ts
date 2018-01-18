@@ -5,15 +5,26 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class QuestionsService {
-
+  
   constructor(private http: HttpClient) { }
-  public questions
+  public questions;
+  public quiz: number = 1;
+  public observe: Observable<any>;
   
   getQuestions(): Observable<any> {
       
-      return this.http.get(`http://54.198.14.22:8090/api/questionslist?quiz=1`);
+      return this.observe
+      //this.http.get(`http://54.198.14.22:8090/api/questionslist?quiz=1`);
   }
 
+  setQuestions() {
+      this.observe = this.http.get(`http://54.198.14.22:8090/api/questionslist?quiz=${this.quiz}`);
+  }
+
+  setQuiz(quizNo : number) {
+      this.quiz = quizNo;
+      
+  }
   
 }
 

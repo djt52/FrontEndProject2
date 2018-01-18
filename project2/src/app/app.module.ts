@@ -12,8 +12,8 @@ import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './login/login.component';
 import { SelectQuizComponent } from './select-quiz/select-quiz.component';
 import { QuestionComponent } from './question/question.component';
-import {QuestionsService } from './questions.service';
-import {LeaderService } from './leader.service';
+import { QuestionsService } from './questions.service';
+import { LeaderService } from './leader.service';
 import { UserService } from './user.service';
 import { RegisterComponent } from './register/register.component';
 
@@ -38,7 +38,8 @@ import { RegisterComponent } from './register/register.component';
     RouterModule.forRoot([
       {path: '', component: MainComponent},
       {path: 'login', component: LoginComponent},
-      {path: 'register', component: RegisterComponent}
+      {path: 'register', component: RegisterComponent},
+      {path: 'quizzes', component: SelectQuizComponent}
     ])
   ],
   providers: [QuestionsService, LeaderService, UserService],

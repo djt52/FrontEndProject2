@@ -8,9 +8,9 @@ export class LeaderService {
 
   constructor(private http: HttpClient) { }
 
-  getLeaders(): Observable<Leaders[]> {
+  getLeaders(): Observable<any> {
       //return [new Leaders('John',1000), new Leaders('Jim',900)];
-      return this.http.get<Leaders[]>("w");
+      return this.http.get('http://54.198.14.22:8090/api/users');
   }
 }
 export class Leaders {

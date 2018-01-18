@@ -25,20 +25,22 @@ export class UserService {
         return 'error';
       }
     }
+    http://54.198.14.22:8090/api/login?email=${email}&password=${password}
     */
+    console.log("ran");
     let xml = new XMLHttpRequest();
     xml.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-      
+          console.log(this.responseText);
           if(this.responseText == `{"validuser":"true"}`) {
-              console.log("logged in")
+              console.log("");
               return 1;
           } else {
               return 0;
           }
        }
     };
-      xml.open('GET',`http://54.198.14.22:8090/api/login?email=${email}&password=${password}`,true);
+      xml.open('GET',`http://54.198.14.22:8090/api/login?email=regop412@gmail.com&password=p4ssw0rd`,true);
       xml.send();
       return 5;
 

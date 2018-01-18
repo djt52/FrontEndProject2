@@ -12,7 +12,7 @@ import { UserService } from '../user.service'
 export class QuestionComponent implements OnInit {
 
   constructor(private questionsService: QuestionsService,private userService: UserService) { }
-
+  public show = 1;
   ngOnInit() {
   /*
     let jsondata = `[{"question":"Arasilly is stupid.Loream Ipsum Fataneums. AWDADWADADAWDAWDWDAWD", "option1":1,"option2":2,"option3":3,"option4":4,"answer":4},{"question":"3+2", "option1":1,"option2":2,"option3":5,"option4":4,"answer":3}]`;
@@ -20,7 +20,9 @@ export class QuestionComponent implements OnInit {
     this.questionsService.getQuestions();
     */
     //this.questionGet(this.parse);
+    this.show = 1;
     this.index = 0;
+    this.questionsService.setQuestions();
     this.questionsService.getQuestions().subscribe(
         res => {
           console.log(res);
@@ -67,10 +69,10 @@ export class QuestionComponent implements OnInit {
       if(answer != 0) {
         if(answer == this.questions[this.index].answer) {
             this.userService.correct();
-            console.log("Correct")
+            console.log("Correct");
         } else {
             this.userService.incorrect();
-            console.log("Incorrect")
+            console.log("Incorrect");
         }
         this.index++;
        }
@@ -82,6 +84,7 @@ export class QuestionComponent implements OnInit {
         this.option3 = this.questions[this.index].choice3;
         this.option4 = this.questions[this.index].choice4;
       } else {
+          this.show = 0;
           console.log(this.userService.getRight())
           console.log(this.userService.getWrong())
           console.log(this.userService.getTotal())

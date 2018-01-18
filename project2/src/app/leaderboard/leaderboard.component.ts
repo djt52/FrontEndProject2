@@ -10,15 +10,20 @@ import { of } from 'rxjs/observable/of';
 })
 export class LeaderboardComponent implements OnInit {
   //leader = [new Leaders('John',1000), new Leaders('Jim',900)];
-  leaders: Leaders[];
+  public leader;
   constructor(private leaderService: LeaderService) { }
 
   ngOnInit() {
-   // this.grabLeaders();
+
+    this.grabLeaders();
   }
 
   grabLeaders(): void {
-    this.leaderService.getLeaders().subscribe(leaders => this.leaders = leaders);
+
+    this.leaderService.getLeaders().subscribe(
+    res => {
+      this.leader = res;
+    );
   }
 }
 /*

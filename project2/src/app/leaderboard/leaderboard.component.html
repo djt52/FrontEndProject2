@@ -1,13 +1,9 @@
-﻿<div class="Leaderboard">
+﻿<div style="text-align:center" class="Leaderboard">
   <h1 id="Leaderboard">Leaderboard</h1>
-  <h4>Total:
-    Lorem ipsum dolor sit amet, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </h4>
-  <ul class="dropdown-menu dropdown-menu-right">
-        <li><a href="#">Quiz 1</a></li>
-        <li><a href="#">Quiz 2</a></li>
-        <li><a href="#">Quiz 3</a></li>
-        <li><a href="#" id="quiz4">Quiz 4</a></li>
-  </ul>
+  <ul style="list-style-type:none">
+      <li *ngFor="let l of leader">
+      {{l.fname}} {{l.lname}} {{l.correctAnswers}}
+      </li>
+    </ul>
 </div>
   
