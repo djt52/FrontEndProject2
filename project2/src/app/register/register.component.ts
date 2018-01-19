@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
       this.userService.register(this.email,this.password,this.first,this.last).subscribe(
          res => {
              this.userService.login(this.email,this.password);
-         }
+         },
          err => {
           console.log("error");
          }

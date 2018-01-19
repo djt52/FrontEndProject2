@@ -16,6 +16,7 @@ import { QuestionsService } from './questions.service';
 import { LeaderService } from './leader.service';
 import { UserService } from './user.service';
 import { RegisterComponent } from './register/register.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     SelectQuizComponent,
     QuestionComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { RegisterComponent } from './register/register.component';
       {path: '', component: MainComponent},
       {path: 'login', component: LoginComponent},
       {path: 'register', component: RegisterComponent},
-      {path: 'quizzes', component: SelectQuizComponent}
+      {path: 'quizzes', component: SelectQuizComponent},
+      {path: 'about', component: AboutComponent}
     ])
   ],
   providers: [QuestionsService, LeaderService, UserService],

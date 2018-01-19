@@ -12,7 +12,7 @@ export class QuizComponent implements OnInit {
 
   ngOnInit() {
   
-    this.questions = this.questionsService.getQuestions();
+    this.questions = this.questionsService.getQuestions(this);
     this.questionAnswered(0);
     this.index=0;
     /*
