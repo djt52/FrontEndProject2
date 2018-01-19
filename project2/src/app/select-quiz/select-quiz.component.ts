@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
+import { QuestionsService } from '../questions.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-select-quiz',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectQuizComponent implements OnInit {
 
-  constructor() { }
+  constructor(private questionsService: QuestionsService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  select(id:number){
+      this.questionsService.setQuiz(id);
+
   }
 
 }

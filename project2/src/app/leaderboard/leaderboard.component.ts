@@ -23,6 +23,7 @@ export class LeaderboardComponent implements OnInit {
     this.leaderService.getLeaders().subscribe(
     res => {
       this.leader = res;
+      }
     );
   }
 }

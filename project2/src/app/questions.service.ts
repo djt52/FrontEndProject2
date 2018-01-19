@@ -10,9 +10,11 @@ export class QuestionsService {
   public questions;
   public quiz: number = 1;
   public observe: Observable<any>;
-  
-  getQuestions(): Observable<any> {
-      
+  public quizComponent;
+
+  getQuestions(obj): Observable<any> {
+      this.quizComponent=obj;
+      console.log("set")
       return this.observe
       //this.http.get(`http://54.198.14.22:8090/api/questionslist?quiz=1`);
   }
@@ -23,7 +25,9 @@ export class QuestionsService {
 
   setQuiz(quizNo : number) {
       this.quiz = quizNo;
-      
+      this.setQuestions();
+      this.quizComponent.update();
+      console.log(this.quiz);
   }
   
 }

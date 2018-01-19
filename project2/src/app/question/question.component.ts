@@ -23,32 +23,16 @@ export class QuestionComponent implements OnInit {
     this.show = 1;
     this.index = 0;
     this.questionsService.setQuestions();
-    this.questionsService.getQuestions().subscribe(
+    this.questionsService.getQuestions(this).subscribe(
         res => {
-          console.log(res);
           this.questions = res;
-          console.log(this.questions);   
           this.questionAnswered(0);
          }
     );
   }
   /*
-  questionGet(cfunction) {
-    let xml = new XMLHttpRequest();
-    xml.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        cfunction(this);
-       }
-    };
-    xml.open('GET',`http://54.198.14.22:8090/api/questionslist?quiz=1`,true);
-    xml.send();
-  }
   
-  parse(xhttp) {
-    let jsondata = xhttp.responseText;
-    this.questions=JSON.parse(jsondata);
-    this.questionAnswered(0);
-  }
+ 
 
   
     this.index = 0;
@@ -64,6 +48,18 @@ export class QuestionComponent implements OnInit {
   public questions;
   public index;
 
+  update() {
+      console.log("update");
+      this.index = 0;
+      this.questionsService.getQuestions(this).subscribe(
+      res => {
+        console.log(res);
+        this.questions = res;
+        console.log(this.questions);   
+        this.questionAnswered(0);
+        }
+    );
+  }
   //NgStyle 
   questionAnswered(answer: number) {
       if(answer != 0) {
@@ -76,7 +72,6 @@ export class QuestionComponent implements OnInit {
         }
         this.index++;
        }
-      //console.log(this.index);
       if(this.index < this.questions.length) {
         this.question = this.questions[this.index].question;
         this.option1 = this.questions[this.index].choice1;
@@ -85,9 +80,7 @@ export class QuestionComponent implements OnInit {
         this.option4 = this.questions[this.index].choice4;
       } else {
           this.show = 0;
-          console.log(this.userService.getRight())
-          console.log(this.userService.getWrong())
-          console.log(this.userService.getTotal())
+          this.userService.updateUser();
       }
   }
 
